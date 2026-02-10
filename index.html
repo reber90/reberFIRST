@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitFlow - Fitness Planner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero card">
+        <h1>FitFlow</h1>
+        <p>Plan workouts, log activity, and stay consistent.</p>
+      </header>
+
+      <section class="card grid two-col">
+        <div>
+          <h2>Today's Plan</h2>
+          <ul id="workout-plan" class="checklist"></ul>
+        </div>
+        <div>
+          <h2>Weekly Goal</h2>
+          <p class="goal-label" id="goal-label">0 / 5 workouts completed</p>
+          <div class="progress-track" aria-label="Workout progress">
+            <div id="goal-progress" class="progress-fill"></div>
+          </div>
+          <button id="complete-workout" class="btn">Complete workout</button>
+        </div>
+      </section>
+
+      <section class="card grid two-col">
+        <div>
+          <h2>Log Workout</h2>
+          <form id="log-form" class="stack">
+            <label>
+              Activity
+              <input id="activity" name="activity" type="text" placeholder="e.g. HIIT" required />
+            </label>
+            <label>
+              Duration (minutes)
+              <input id="duration" name="duration" type="number" min="5" max="240" required />
+            </label>
+            <button type="submit" class="btn">Add log</button>
+          </form>
+        </div>
+        <div>
+          <h2>Recent Activity</h2>
+          <ul id="activity-log" class="activity-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
